@@ -1,13 +1,58 @@
+/* ==================== BODY E TEMAS ==================== */
+
+/* Corpo do site - fonte, largura, alinhamento e espaçamento */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Não definimos cor aqui, será herdada por tema */
+    background-color: #f5f5f5; /* cor inicial de fundo, tema claro padrão */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Tema Claro --- */
 body.light-theme {
-    background-color: #ffffff;
-    color: #222;
+    background-color: #ffffff; /* fundo geral claro */
+    color: #222222; /* cor base do texto */
 }
 
+/* --- Tema Escuro --- */
 body.dark-theme {
-    background-color: #121212;
-    color: #f5f5f5;
+    background-color: #121212; /* fundo geral escuro */
+    color: #f5f5f5; /* cor base do texto */
 }
 
+/* Fazer todo elemento dentro do body herdar a cor do tema */
+body.light-theme *, body.dark-theme * {
+    color: inherit;
+    transition: color 0.3s;
+}
+
+/* ==================== HEADER ==================== */
+header {
+    position: relative;       /* necessário para o botão absoluto */
+    padding: 20px 20px 40px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* Fundo do header por tema */
+body.light-theme header {
+    background-color: #f5f5f5;
+}
+
+body.dark-theme header {
+    background-color: #1f1f1f;
+}
+
+/* Títulos dentro do header */
+header h1, header h2, header h4 {
+    transition: color 0.3s;
+}
+
+/* ==================== BOTÃO DO TEMA ==================== */
 .theme-btn {
     position: absolute;
     top: 20px;
@@ -16,64 +61,71 @@ body.dark-theme {
     border: none;
     font-size: 22px;
     cursor: pointer;
+    transition: color 0.3s, opacity 0.2s; 
 }
 
 .theme-btn:hover {
     opacity: 0.7;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f5f5f5;
-    color: #333;
+/* Cor do botão por tema */
+body.light-theme .theme-btn {
+    color: #222222;
 }
 
+body.dark-theme .theme-btn {
+    color: #f5f5f5;
+}
+
+/* ==================== TÍTULOS GERAIS ==================== */
 h1 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #0b3d91;
 }
 
 h2 {
     font-size: 1.5rem;
     margin-bottom: 8px;
-    color: #1a1a1a;
 }
 
 h4 {
     font-size: 1.1rem;
     margin-bottom: 6px;
-    color: #555;
 }
 
+/* ==================== PARÁGRAFOS ==================== */
 p {
     font-size: 1rem;
     margin-bottom: 12px;
-    color: #333;
+    transition: color 0.3s;
 }
 
+/* ==================== LISTAS ==================== */
 ul, ol {
     margin: 0 0 16px 1.5rem;
     padding-left: 0;
-    color: #333;
+    transition: color 0.3s;
 }
 
 li {
     margin-bottom: 6px;
 }
 
+/* ==================== CARDS ==================== */
 .card {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     margin-bottom: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+body.dark-theme .card {
+    background-color: #1e1e1e; /* fundo escuro do card no tema dark */
+}
+
+/* ==================== NOTAS ==================== */
 .note {
     background-color: #fff8e6;
     border-left: 4px solid #ffd36b;
@@ -81,8 +133,16 @@ li {
     border-radius: 8px;
     margin: 10px 0;
     color: #5a4220;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+body.dark-theme .note {
+    background-color: #2b2b2b;
+    color: #ffd36b;
+    border-left-color: #ffd36b;
+}
+
+/* ==================== BOTÕES CTA ==================== */
 .cta {
     display: inline-block;
     padding: 10px 16px;
@@ -92,7 +152,7 @@ li {
     border-radius: 8px;
     font-weight: 600;
     box-shadow: 0 4px 12px rgba(11,116,218,0.12);
-    transition: transform 150ms ease, box-shadow 150ms ease;
+    transition: transform 150ms ease, box-shadow 150ms ease, background-color 0.3s, color 0.3s;
     border: none;
     cursor: pointer;
 }
@@ -100,4 +160,9 @@ li {
 .cta:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(11,116,218,0.18);
+}
+
+body.dark-theme .cta {
+    background-color: #0b5bbb; /* azul mais escuro no dark */
+    color: #ffffff;
 }
