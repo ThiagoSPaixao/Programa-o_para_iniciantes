@@ -1,3 +1,8 @@
+
+* {
+    transition: color 0.3s ease-in  ;
+}
+
 /* ==================== BODY E TEMAS ==================== */
 
 /* Corpo do site - fonte, largura, alinhamento e espaçamento */
@@ -123,6 +128,61 @@ li {
 
 body.dark-theme .card {
     background-color: #1e1e1e; /* fundo escuro do card no tema dark */
+}
+
+/* ================= EXERCISE FORM STYLES ================= */
+
+.exercise-card {
+  padding: 18px;
+}
+
+.exercise-form label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: 600;
+}
+
+.exercise-form input[type="text"],
+.exercise-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db; /* leve cinza */
+  background: transparent;
+  color: inherit; /* herda cor do tema (dark/light) */
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.exercise-form textarea {
+  resize: vertical; /* permite ajustar altura */
+  min-height: 140px;
+}
+
+.form-actions {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#form-feedback {
+  font-size: 0.95rem;
+  color: var(--muted, #666);
+}
+
+/* botão em estado 'disabled' quando enviando */
+#submit-btn[disabled] {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+}
+
+/* adaptações para dark theme (se você já tem body.dark-theme) */
+body.dark-theme .exercise-form input[type="text"],
+body.dark-theme .exercise-form textarea {
+  border-color: #3a3a3a;
+  background-color: rgba(255,255,255,0.02);
 }
 
 /* ==================== NOTAS ==================== */

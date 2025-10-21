@@ -174,6 +174,28 @@ Imagine que você precisa criar um programa simples para analisar a temperatura 
     ou realizar uma aspiração de vias aéresas, ou se quiser um desafio extra <strong>Nível HARD</strong>, 
     ensine um robô o passo a passo de uma RCP.</p>
 
+<section class="card exercise-card" aria-labelledby="exercise-title">
+  <h3 id="exercise-title">📝 Entregar Exercício — Fase 1</h3>
+
+  <form id="exercise-form" class="exercise-form" novalidate>
+    <label for="studentName">Seu nome (opcional)</label>
+    <input id="studentName" name="studentName" type="text" placeholder="Seu nome" />
+
+    <label for="exercise-text">Escreva aqui o passo a passo que você fez (exercício):</label>
+    <textarea id="exercise-text" name="exercise" rows="8" placeholder="Escreva seu exercício..." required></textarea>
+
+    <!-- Campos ocultos para o FormSubmit -->
+    <input type="hidden" name="_subject" value="Exercício - Fase 1" />
+    <input type="hidden" name="_captcha" value="false" />
+
+    <div class="form-actions">
+      <button type="submit" class="cta" id="submit-btn">Entregar Exercício</button>
+      <span id="form-feedback" role="status" aria-live="polite"></span>
+    </div>
+  </form>
+</section>
+
+
 <h4>🏁 Conclusão do Dia</h4>
 
 <p>
