@@ -328,8 +328,54 @@ body.matrix-page {
   display: block;
 }
 
-/* faz o menu flutuar acima do canvas */
+/* === MENU SOBRE O MATRIX (sem fundo sólido) === */
+
 .menu {
-  position: relative;
-  z-index: 2;        /* acima do canvas */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent; /* agora o matrix aparece atrás */
+  color: #e8ffe8;
+  padding: 28px;
+  text-shadow: 0 0 6px rgba(0, 255, 140, 0.7); /* brilho no texto */
+}
+
+.menu-list {
+  background: rgba(0, 0, 0, 0.25); /* leve transparência p/ leitura */
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  width: min(720px, 92vw);
+  backdrop-filter: blur(4px); /* deixa chique */
+}
+
+.menu-list h2 {
+  margin-bottom: 16px;
+  color: #b8ffb8;
+}
+
+.menu-list a {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 18px;
+  max-width: 360px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #002b00;
+  background: linear-gradient(180deg, #bfffbf, #9ee69e);
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.menu-list a:hover {
+  transform: translateY(-4px);
+}
+
+.menu-footer {
+  margin-top: 14px;
+  color: #bffdca;
+  font-size: 0.95rem;
 }
