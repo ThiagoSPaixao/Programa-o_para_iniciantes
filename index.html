@@ -4,27 +4,34 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Bem-vindo — Curso de Programação</title>
-
-<!-- link para o CSS -->
+<meta name="description" content="Curso de Programação — Aprenda do Zero de forma guiada e prática.">
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="matrix-page">
 
-<!-- CANVAS por trás de tudo: onde os códigos caem -->
-<canvas id="matrix-canvas" aria-hidden="true"></canvas>
+  <!-- ANIMAÇÃO MATRIX -->
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
 
-<!-- Conteúdo central -->
-<main class="hero" role="main" aria-labelledby="hero-title">
-    <h1 id="hero-title" class="neon">A realidade é feita de código. Desperte.</h1>
+  <!-- CONTEÚDO -->
+  <main class="hero" role="main" aria-labelledby="hero-title">
+      <h1 id="hero-title" class="neon">A realidade é feita de código. Desperte.</h1>
 
-    <!-- o botão ENTRAR (fica acima do canvas) -->
-    <button id="enter-btn" class="enter-btn" aria-label="Entrar no curso">ENTRAR</button>
+      <button id="enter-btn" class="enter-btn" aria-label="Entrar no curso">
+        ENTRAR
+      </button>
 
-    <!-- pequena dica/legenda -->
-    <p class="subtitle">Clique em ENTRAR para escolher a sua fase.</p>
-</main>
+      <p class="subtitle">Clique em ENTRAR para escolher a sua fase.</p>
+  </main>
 
-<!-- script da animação e controle -->
-<script src="matrix.js"></script>
+  <!-- SCRIPT -->
+  <script src="matrix.js"></script>
+  <script>
+    // redirecionamento do botão
+    document.getElementById("enter-btn").addEventListener("click", () => {
+      window.location.href = "menu.html";
+    });
+  </script>
+
 </body>
 </html>
