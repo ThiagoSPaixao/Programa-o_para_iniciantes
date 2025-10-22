@@ -12,6 +12,7 @@ toggleBtn.addEventListener("click", () => {
     }
 });
 
+
 // ==== EXERCÍCIO: Envio para FormSubmit via AJAX ====
 (() => {
   const form = document.getElementById('exercise-form');
@@ -78,3 +79,12 @@ toggleBtn.addEventListener("click", () => {
     }
   });
 })();
+
+document.addEventListener("DOMContentLoaded", function() {
+    const enterBtn = document.getElementById("enter-btn");
+
+    enterBtn.addEventListener("click", function() {
+        // redireciona para o menu
+        window.location.href = "menu.html";
+    });
+});

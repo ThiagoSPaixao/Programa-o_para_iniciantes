@@ -226,3 +226,110 @@ body.dark-theme .cta {
     background-color: #0b5bbb; /* azul mais escuro no dark */
     color: #ffffff;
 }
+
+/* === Estilo geral da página Matrix (Visual C - Brilhante) === */
+
+/* reset básico para garantir comportamento previsível */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* corpo: fundo completamente escuro */
+body.matrix-page {
+  background: #000; /* fundo preto */
+  height: 100vh;
+  overflow: hidden; /* evita scroll enquanto a animação ocupa toda a tela */
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #cfeef0;
+}
+
+/* canvas ocupa toda a tela e fica por trás do conteúdo */
+#matrix-canvas {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  z-index: 0;
+  display: block;
+}
+
+/* hero central: container do texto e botão */
+.hero {
+  position: relative;
+  z-index: 2; /* acima do canvas */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  pointer-events: none; /* evita que o container capture cliques no canvas por acidente */
+}
+
+/* permitimos clique apenas no botão */
+.hero .enter-btn { pointer-events: auto; }
+
+/* texto neon (título) */
+.neon {
+  font-size: clamp(1.4rem, 3.6vw, 2.6rem);
+  letter-spacing: 0.6px;
+  color: #7afc7a;
+  text-shadow:
+    0 0 6px rgba(122,252,122,0.35),
+    0 0 10px rgba(122,252,122,0.25),
+    0 0 20px rgba(122,252,122,0.12);
+  max-width: 1100px;
+  margin-inline: 12px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* pequeno subtítulo */
+.subtitle {
+  color: rgba(190,255,190,0.9);
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* botão ENTRAR */
+.enter-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 999px;
+  border: 2px solid rgba(122,252,122,0.18);
+  background: linear-gradient(180deg, rgba(122,252,122,0.12), rgba(122,252,122,0.06));
+  color: #eaffea;
+  cursor: pointer;
+  box-shadow:
+    0 6px 18px rgba(122,252,122,0.06),
+    0 0 18px rgba(122,252,122,0.06) inset;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+/* efeito hover/active do botão */
+.enter-btn:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 30px rgba(122,252,122,0.12),
+    0 0 28px rgba(122,252,122,0.08) inset;
+}
+.enter-btn:active { transform: translateY(-1px); }
+
+/* responsividade */
+@media (max-width: 420px) {
+  .neon { font-size: 1.2rem; padding: 0 16px; }
+  .enter-btn { padding: 10px 16px; font-size: 0.95rem; }
+}
+/* canvas Matrix no menu */
+#matrix-canvas-menu {
+  position: fixed;   /* fixa atrás do conteúdo */
+  inset: 0;          /* top:0; right:0; bottom:0; left:0 */
+  z-index: 0;        /* atrás do menu */
+  display: block;
+}
+
+/* faz o menu flutuar acima do canvas */
+.menu {
+  position: relative;
+  z-index: 2;        /* acima do canvas */
+}
