@@ -379,3 +379,16 @@ body.matrix-page {
   color: #bffdca;
   font-size: 0.95rem;
 }
+
+blockquote {
+  border-left: 4px solid #555;
+  padding-left: 12px;
+  font-style: italic;
+  margin: 16px 0;
+}
+
+.lista-sem-marcador {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
