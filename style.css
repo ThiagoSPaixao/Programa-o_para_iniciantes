@@ -423,3 +423,8 @@ blockquote {
   font-family: monospace;
   font-size: 14px;
 }
+
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
