@@ -414,3 +414,12 @@ blockquote {
 .tabela tr:nth-child(even) {
   background: #fafafa;
 }
+
+.code-example {
+  background: #1e1e1e;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 14px;
+}
