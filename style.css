@@ -397,23 +397,56 @@ blockquote {
   width: 100%;
   border-collapse: collapse;
   margin: 20px;
+  font-family: monospace;
   font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-theme .tabela {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-theme .tabela th {
+  background-color: #e6e6e6;
+}
+
+body.light-theme .tabela tr:nth-child(even) {
+  background: #fafafa;
+}
+
+body.dark-theme .tabela {
+  background-color: #1b1b1b;
+  color: #e0e0e0;
+}
+
+body.dark-theme .tabela th {
+  background-color: #2a2a2a;
+}
+
+body.dark-theme .tabela tr:nth-child(even) {
+  background: #202020;
 }
 
 .tabela th, .tabela td {
   padding: 12px 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #3a3a3a;
   text-align: left;
+  font-weight: normal;
 }
 
 .tabela th {
-  background: #f4f4f4;
   font-weight: bold;
 }
 
-.tabela tr:nth-child(even) {
-  background: #fafafa;
+body.light-theme .tabela tr:hover {
+  background-color: rgba(0, 128, 0, 0.12);
 }
+
+body.dark-theme .tabela tr:hover {
+  background-color: rgba(120, 255, 120, 0.08);
+}
+
 
 .code-example {
   background: #1e1e1e;
