@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../style.css">
 </head>
 
-<body class="light-theme">
+<body>
     
     <header>
     <button id="theme-toggle" class="theme-btn">🌙</button>
@@ -23,6 +23,206 @@
 
     <p>Na programação, chamamos isso de IF/ELSE (SE/SENÃO), e é incrivelmente simples e poderoso! Você vai descobrir
     que já pensa como um programador há anos — só não sabia o nome técnico! 😄</p>
+
+    <h4>🎯 Objetivos do dia</h4>
+
+    <p>Ao final desta aula, você será capaz de:</p>
+
+    <ul class="checklist">
+        <li>✅ Entender o que é uma condição</li>
+        <li>✅ Usar o if / else para tomar decisões em código</li>
+        <li>✅ Simular decisões do mundo real em forma de programa</li>
+        <li>✅ Criar seus próprios exemplos com base no dia a dia</li>
+    </ul>
+
+    <h4>🧠 1. O que é uma condição?</h4>
+
+    <p>Uma condição é uma pergunta que só pode ter duas respostas:
+Verdadeiro ou Falso.</p>
+
+    <p>Na vida real:</p>
+
+    <ul>
+        <li>Se o semáforo estiver verde, posso atravessar.</li>
+        <li>Se o saldo for maior que o valor da compra, posso pagar</li>
+        <li>Se tiver café, faço café; senão, vou de água mesmo ☕💧</li>
+    </ul>
+
+    <h4>💻 2. O “if” em programação</h4>
+
+    <p>Na programação, usamos if para expressar essa lógica.</p>
+
+    <p><strong>🧩 Estrutura básica:</strong></p>
+
+    <section>
+        <div class="code-example">
+            <pre><code>
+python
+
+if condição:
+    ação_se_verdadeiro
+else:
+    ação_se_falso
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <h4>🧠 Exemplo prático:</h4>
+
+    <br>
+
+    <section>
+        <div class="code-example">
+            <pre><code>
+python
+
+hora = 13
+
+if hora < 12:
+    print("Bom dia!")
+else:
+    print("Boa tarde!")
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <p><strong>💬 O que acontece aqui?</strong></p>
+    
+    <p>O programa verifica se a hora é menor que 12.<br>
+    Se for, diz “Bom dia!”.<br>
+    Se não for, diz “Boa tarde!”.</p> <br>
+
+    <h4>🚦 3. Condições com comparações</h4>
+
+    <p>Podemos comparar valores usando operadores:</p>
+
+    <table class="tabela">
+        <tr>
+            <th>Símbolo</th>
+            <th>Significado</th>
+            <th>Exemplo</th>
+        </tr>
+        <tr>
+            <td>==</td>
+            <td>Igual a</td>
+            <td>if idade == 18:</td>
+        </tr>
+        <tr>
+            <td>!=</td>
+            <td>Diferente de</td>
+            <td>if cor != "vermelho":</td>
+        </tr>
+        <tr>
+            <td>></td>
+            <td>Maior que</td>
+            <td>if nota > 7:</td>
+        </tr>
+        <tr>
+            <td><</td>
+            <td>Menor que</td>
+            <td>if temperatura < 20:</td>
+        </tr>
+        <tr>
+            <td>>=</td>
+            <td>Maior ou igual a</td>
+            <td>if saldo >= 0:</td>
+        </tr>
+        <tr>
+            <td><=</td>
+            <td>Menor ou igual a</td>
+            <td>if tentativas <= 3:</td>
+        </tr>
+    </table>
+    
+    <p>Esses operadores são o alfabeto das decisões.</p>
+
+    <br>
+
+    <h4>⚙️ 4. Exemplo com a vida real</h4>
+
+    <p>Imagine que você quer decidir se pode sair para passear:</p>
+    
+    <section>
+        <div class="code-example">
+            <pre><code>
+python
+
+chovendo = True
+
+if chovendo:
+    print("Leve o guarda-chuva!")
+else:
+    print("Aproveite o sol!")
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <p><strong>➡️ O programa pensa como você pensaria.</strong></p>
+
+    <p>Se estiver chovendo (condição verdadeira), ele te dá um aviso.<br>
+    Se não, muda o plano.</p>
+
+    <br>
+    
+    <h4>🧩 5. Exemplo prático com entrada de dados</h4>
+    <p>Vamos deixar o usuário tomar decisões com o programa:</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code>
+python
+
+idade = int(input("Digite sua idade: "))
+
+if idade >= 18:
+    print("Você pode dirigir!")
+else:
+    print("Você ainda não pode dirigir.")
+            </code></pre>
+        </div>
+    </section>
+
+    <p>Esse é o tipo de código que você verá em cadastros, sistemas e formulários — ele decide o que fazer com base
+    em informações do usuário.</p>
+
+    <br>
+
+    <h4>📋 Resumo do conteúdo</h4>
+
+    <p>Hoje você aprendeu:</p>
+
+    <ul class="checklist">
+        <li>✅ O que é uma condição</li>
+        <li>✅ Como usar if e else para tomar decisões</li>
+        <li>✅ Comparações (==, >, <, >=, etc.)</li>
+        <li>✅ Aplicações práticas em programas reais</li>
+    </ul>
+
+    <h4>✍️ Exercício guiado</h4>
+
+    <p><strong>🧩 Desafio passo a passo: Sistema de aprovação simples</strong></p>
+
+    <p>Crie um programa que pergunte a nota de um aluno e diga se ele foi aprovado (nota ≥ 7) ou reprovado.</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code>
+nota = float(input("Digite sua nota: "))
+
+if nota >= 7:
+    print("Aprovado! 🎉")
+else:
+    print("Reprovado. Estude mais um pouco! 📚")
+            </code></pre>
+        </div>
+    </section>
+
 
 
 <script src="../../script.js"></script>
