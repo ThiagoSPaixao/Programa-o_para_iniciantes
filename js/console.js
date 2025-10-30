@@ -13,9 +13,10 @@ function builtinRead(x) {
 }
 
 function runCode() {
-  const code = document.getElementById("code-input").value;
-  const output = document.getElementById("output");
-  output.textContent = ""; // limpa antes de executar
+    document.getElementById("code-input").value ||= 'print("Olá, programador!")';
+    const code = document.getElementById("code-input").value;
+    const output = document.getElementById("output");
+    output.textContent = ""; // limpa antes de executar
 
   Sk.configure({ output: outf, read: builtinRead });
   Sk.misceval
