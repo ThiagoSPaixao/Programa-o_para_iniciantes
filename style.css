@@ -503,3 +503,20 @@ body.dark-theme .tabela tr:hover {
   list-style: none;
   padding-left: 0;
 }
+
+.btn-voltar {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: #002b00;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-voltar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
