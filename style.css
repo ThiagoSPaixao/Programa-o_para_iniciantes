@@ -277,8 +277,8 @@ body.dark-theme .cta {
 /* corpo: fundo completamente escuro */
 body.matrix-page {
   background: #000; /* fundo preto */
-  height: 100vh;
-  overflow: hidden; /* evita scroll enquanto a animação ocupa toda a tela */
+  min-height: 100vh;
+  overflow-y: auto; /* evita scroll enquanto a animação ocupa toda a tela */
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: #cfeef0;
 }
