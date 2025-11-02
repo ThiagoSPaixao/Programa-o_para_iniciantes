@@ -70,9 +70,16 @@ body.light-theme *, body.dark-theme * {
 /* ==================== HEADER ==================== */
 header {
     position: relative;       /* necessário para o botão absoluto */
-    padding: 20px 20px 40px;
+    padding: 20px;
     text-align: center;
     transition: background-color 0.3s;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;  /* um botão à esquerda, outro à direita */
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 /* Fundo do header por tema */
@@ -505,13 +512,12 @@ body.dark-theme .tabela tr:hover {
 }
 
 .btn-voltar {
-  position: absolute;
   left: 20px;
   top: 20px;
   color: #002b00;
-  font-weight: 700;
+  font-weight: bold;
   padding: 8px 14px;
-  border-radius: 999px;
+  border-radius: 6px;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
