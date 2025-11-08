@@ -499,12 +499,63 @@ body.dark-theme .tabela tr:hover {
 
 
 .code-example {
-  background: #1e1e1e;
-  color: #fff;
-  padding: 12px;
-  border-radius: 8px;
-  font-family: monospace;
-  font-size: 14px;
+  .code-example {
+  background: #1e1e1e !important;
+  color: #d4d4d4;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: auto;
+  border-left: 5px solid #7afc7a;
+  margin: 25px 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+.code-example pre[class*="language-"] {
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.code-example code[class*="language-"] {
+  background: transparent !important;
+  text-shadow: none !important;
+  color: #d4d4d4 !important;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+}
+
+.token.keyword { color: #569cd6 !important; }        /* for, if, def */
+.token.function { color: #dcdcaa !important; }       /* print, range */
+.token.string { color: #ce9178 !important; }         /* textos */
+.token.number { color: #b5cea8 !important; }         /* números */
+.token.comment { color: #6a9955 !important; }        /* comentários */
+.token.operator { color: #d4d4d4 !important; }       /* =, :, etc */
+.token.class-name { color: #4ec9b0 !important; }     /* classes */
+.token.punctuation { color: #d4d4d4 !important; }    /* pontuação */
+
+.code-example::-webkit-scrollbar {
+  height: 8px;
+}
+
+.code-example::-webkit-scrollbar-track {
+  background: #2d2d2d;
+  border-radius: 4px;
+}
+
+.code-example::-webkit-scrollbar-thumb {
+  background: #7afc7a;
+  border-radius: 4px;
+}
+
+.code-example::-webkit-scrollbar-thumb:hover {
+  background: #5afc5a;
+}
+
 }
 
 .checklist {
