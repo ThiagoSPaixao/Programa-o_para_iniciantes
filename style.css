@@ -498,12 +498,12 @@ body.dark-theme .tabela tr:hover {
 }
 
 
+
 .code-example {
-  .code-example {
   background: #1e1e1e !important;
   color: #d4d4d4;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
   font-size: 15px;
   line-height: 1.6;
@@ -554,8 +554,6 @@ body.dark-theme .tabela tr:hover {
 
 .code-example::-webkit-scrollbar-thumb:hover {
   background: #5afc5a;
-}
-
 }
 
 .checklist {
