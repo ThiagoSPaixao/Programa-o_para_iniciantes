@@ -98,9 +98,249 @@ saudacao()
 
     <br>
 
+    <p><strong>➡️ Saída:</strong></p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+Olá! Seja bem-vindo ao curso de programação!
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <h4>🧩 3. Funções com Parâmetros (Entradas)</h4>
+
+    <p>Podemos tornar a função mais dinâmica, passando informações como entrada.</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+def saudacao(nome):
+    print("Olá,", nome, "! Seja bem-vindo!")
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <p>💬 Agora a função precisa de um nome para funcionar.</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+saudacao("Thiago")
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <p>➡️ Saída:</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+Olá, Thiago! Seja bem-vindo!
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <h4>🎁 4. Funções com Retorno (Saída)</h4>
+
+    <p>Algumas funções devolvem um valor — por exemplo, um cálculo.</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+def somar(a, b):
+    return a + b
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <p>💬 O <strong><em>return</em></strong> envia o resultado de volta para quem chamou a função.</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+resultado = somar(5, 3)
+print("O resultado é:", resultado)
+            </code></pre>
+        </div>
+    </section>
+
+    <p>➡️ Saída:</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+O resultado é: 8
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <h4>🔁 5. Reutilizando Código</h4>
+
+    <p>Sem função:</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+print(5 + 3)
+print(10 + 7)
+print(2 + 9)
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <p>Com função:</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+def somar(a, b):
+    return a + b
+
+print(somar(5, 3))
+print(somar(10, 7))
+print(somar(2, 9))
+            </code></pre>
+        </div>
+    </section>
+
+    <p>💡 Resultado: menos repetições, mais clareza, mais profissionalismo.</p>
+
+    <br>
+
+    <h4>🧰 6. Misturando Funções com Laços</h4>
+
+    <p>As funções ficam ainda mais poderosas quando combinadas com loops:</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+def contar_ate(n):
+    for i in range(1, n + 1):
+        print(i)
+
+contar_ate(5)
+            </code></pre>
+        </div>
+    </section>
+
+    <p>➡️ Saída:</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+1
+2
+3
+4
+5
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <h4>💬 7. Exemplo Real — Calculadora Simples</h4>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+ def somar(a, b):
+    return a + b
+
+def subtrair(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    return a / b
+
+print("Resultados:")
+print("5 + 3 =", somar(5, 3))
+print("10 - 4 =", subtrair(10, 4))
+print("6 * 2 =", multiplicar(6, 2))
+print("8 / 2 =", dividir(8, 2))
+            </code></pre>
+        </div>
+    </section>
+
+    <p>💬 Agora, se precisar alterar a forma de calcular algo, basta mudar dentro da função — e o resto do código continua funcionando.</p>
+
+    <br>
     
+    <h4>📋 Resumo do Conteúdo</h4>
 
+    <ul class="checklist">
+        <li>✅ Funções são blocos de código que executam tarefas específicas</li>
+        <li>✅ Você pode passar dados (parâmetros) e receber resultados (return)</li>
+        <li>✅ Elas tornam o código mais limpo, organizado e reaproveitável
+        <li>✅ São a base da programação modular e profissional</li>
+    </ul>
 
+    <br>
+
+    <h4>✍️ Exercício Guiado</h4>
+
+    <p>Crie uma função chamada <strong><em>dobro</em></strong> que receba um número e retorne o dobro dele.</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+def dobro(numero):
+    return numero * 2
+
+valor = int(input("Digite um número: "))
+print("O dobro é:", dobro(valor))               
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <h4>🚀 Desafio Final</h4>
+    
+    <p>Crie um pequeno programa que:</p>
+
+    <ol>
+        <li>Peça o nome do usuário</li>
+        <li>Peça a idade</li>
+        <li>Tenha uma função chamada <strong><em>mensagem_pessoal(nome, idade)</em></strong></li>
+    </ol>
+
+    <p>que exiba:</p>
+
+    <blockquote>"Olá, [nome]! Você tem [idade] anos e está indo muito bem no curso!"</blockquote>
+
+    <p>💡 Bônus: se quiser, adicione uma função que calcule quantos anos faltam para 100 😉</p>
+
+    <br>
+
+    <p>🏁 Conclusão</p>
+
+    <p>👏 Parabéns! Você agora aprendeu o pilar da organização do código: as funções.<br>
+    Com elas, seu raciocínio se torna mais profissional e seu código, muito mais limpo.</p>
+
+    <p>A partir daqui, você já pensa como um verdadeiro desenvolvedor: criando, testando e reaproveitando suas próprias ferramentas.</p>
+
+    <p>Na próxima aula (aula 7), vamos entrar em mini projetos do módulo 1, para aplicar tudo o que você aprendeu até agora! 🧠💻✨</p>
+
+    <p>Continue firme — você está muito perto de dominar os fundamentos! 🚀</p>
 
 <script src="../../script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
