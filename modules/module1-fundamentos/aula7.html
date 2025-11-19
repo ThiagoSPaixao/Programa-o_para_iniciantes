@@ -38,9 +38,251 @@
         <li>✅ Ganhar confiança para evoluir para os próximos módulos</li>
     </ul>
 
-    <em>Esta Aula está em Desenvolvimento...</em>
+    <br>
 
+    <H4>🧩 Mini Projeto 1 — Calculadora Inteligente</H4>
 
+    <br>
+
+    <P><strong>🧠 O que vamos usar:</strong></P>
+
+    <ul>
+        <li><em><strong>input()</strong></em> para receber dados</li>
+        <li><em><strong>if/elif/else</strong></em> para decidir a operação</li>
+        <li>funções para organizar o código</li>
+    </ul>
+
+    <br>
+
+    <p><strong>🧮 Código completo:</strong></p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+def somar(a, b):
+    return a + b
+
+def subtrair(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    return a / b
+
+print("=== Calculadora Inteligente ===")
+print("Escolha uma operação:")
+print("1 - Soma")
+print("2 - Subtração")
+print("3 - Multiplicação")
+print("4 - Divisão")
+
+opcao = int(input("Digite o número da operação: "))
+
+num1 = float(input("Primeiro número: "))
+num2 = float(input("Segundo número: "))
+
+if opcao == 1:
+    resultado = somar(num1, num2)
+elif opcao == 2:
+    resultado = subtrair(num1, num2)
+elif opcao == 3:
+    resultado = multiplicar(num1, num2)
+elif opcao == 4:
+    resultado = dividir(num1, num2)
+else:
+    print("Opção inválida!")
+    resultado = None
+
+if resultado is not None:
+    print("Resultado:", resultado)
+
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <p><strong>💬 Explicação:</strong></p>
+    <ul>
+        <li>Cada operação foi isolada em uma função própria.</li>
+        <li>O usuário escolhe a operação e informa os números.</li>
+        <li>O código decide o que fazer e exibe o resultado.</li>
+    </ul>
+
+    <br>
+
+    <h4>🧩 Mini Projeto 2 — Controle de Temperatura</h4>
+
+    <br>
+
+    <p><strong>🌡️ Situação:</strong></p>
+
+    <p>Imagine que você trabalha num hospital, restaurante ou laboratório. <br>
+    Você precisa verificar se a temperatura está dentro da faixa ideal.</p>
+
+    <br>
+    
+    <p><strong>🧮 Código:</strong></p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+def verificar_temperatura(temp):
+    if temp < 18:
+        return "Muito frio ❄️"
+    elif temp > 26:
+        return "Muito quente ☀️"
+    else:
+        return "Temperatura ideal 🌿"
+
+temperatura = float(input("Informe a temperatura atual: "))
+print(verificar_temperatura(temperatura))
+            </pre></code>
+        </di>
+    </section>
+
+    <br>
+
+    <p><strong>💬 Explicação:</strong></p>
+    
+    <ul>
+        <li>A função <em><strong>verificar_temperatura()</strong></em> toma uma decisão lógica usando <em><strong>if/elif/else</strong></em>.</li>
+        <li>Dependendo do valor, ela retorna uma mensagem apropriada.</li>
+    </ul>
+
+    <br>
+
+    <h4>🧩 Mini Projeto 3 — Agenda Simples</h4>
+
+    <br>
+
+    <p><strong>📅 Situação:</strong></p>
+
+    <p>Você quer armazenar tarefas do dia e depois listar tudo que foi anotado.</p>
+
+    <br>
+
+    <p><strong>🧮 Código:</strong></p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+tarefas = []
+
+def adicionar_tarefa():
+    tarefa = input("Digite uma nova tarefa: ")
+    tarefas.append(tarefa)
+    print("Tarefa adicionada com sucesso!")
+
+def listar_tarefas():
+    print("\n=== Suas Tarefas ===")
+    for i, t in enumerate(tarefas, 1):
+        print(f"{i}. {t}")
+
+while True:
+    print("\n1 - Adicionar tarefa")
+    print("2 - Listar tarefas")
+    print("3 - Sair")
+
+    opcao = input("Escolha: ")
+
+    if opcao == "1":
+        adicionar_tarefa()
+    elif opcao == "2":
+        listar_tarefas()
+    elif opcao == "3":
+        print("Saindo... até mais! 👋")
+        break
+    else:
+        print("Opção inválida!")
+            </code></pre>
+        </div>
+    </section>
+
+    <br>
+
+    <p><strong>💬 Explicação:</strong></p>
+
+    <ul>
+        <li>Usamos listas para guardar as tarefas.</li>
+        <li>As funções ajudam a organizar o código.</li>
+        <li>O <em><strong>while True</strong></em> cria um menu que se repete, até o usuário escolher sair.</li>
+    </ul>
+
+    <br>
+
+    <h4>🧭 Resumo do Conteúdo</h4>
+
+    <ul class="checklist">
+        <li>✅ Você aprendeu a unir tudo o que estudou até agora</li>
+        <li>✅ Criou projetos reais, com entrada, processamento e saída</li>
+        <li>✅ Usou funções, condicionais e loops de forma prática</li>
+        <li>✅ Deu o primeiro passo rumo ao raciocínio de um programador profissional</li>
+    </ul>
+
+    <br>
+
+    <h4>✍️ Exercício Guiado</h4>
+    
+    <br>
+
+    <p>Crie um programa chamado controle_de_idade() que:</p>
+
+    <ol>
+        <li>Peça o nome e a idade da pessoa.</li>
+        <li>Use uma função para verificar:</li>
+            <ul>
+                <li>Se for menor que 18 → “Menor de idade.”</li>
+                <li>Entre 18 e 59 → “Adulto.”</li>
+                <li>60 ou mais → “Idoso.”</li>
+            </ul>
+        <li>Mostre uma mensagem personalizada com o nome.</li>
+    </ol>
+
+    <br>
+
+    <h4>🚀 Desafio Final</h4>
+
+    <p><strong>💡 Desafio: “Simulador de Caixa de Supermercado”</strong></p>
+
+    <p>Crie um programa que:</p>
+
+    <ol>
+        <li>Peça o nome do produto e o valor.</li>
+        <li>Some o total de compras.</li>
+        <li>Ao digitar “fim”, exiba o total.</li>
+        <li>Mostre uma mensagem final como:</li>
+        <blockquote>“Compra finalizada! Total: R$ XX,XX. Obrigado e volte sempre!”</blockquote>
+    </ol>
+
+    <p>Dica: use uma lista para armazenar os valores e um loop para repetir até o usuário digitar “fim”.</p>
+
+    <br>
+
+    <h4>🏁 Conclusão</h4>
+
+    <br>
+
+    <p>🎉 Parabéns! Você concluiu a Fase 1 — <strong>Fundamentos de Programação!</strong></p>
+
+    <p>Agora você já domina:</p>
+
+    <ul>
+        <li>Como <strong>pensar como um programador</strong></li>
+        <li>Como <strong>tomar decisões</strong></li>
+        <li>Como <strong>repetir ações</strong></li>
+        <li>Como <strong>organizar código com funções</strong></li>
+        <li>E até <strong>criar pequenos programas úteis!</strong></li>
+    </ul>
+
+    <br>
+
+    <p>Na próxima etapa (Fase 2), entraremos no mundo das estruturas de dados — listas, dicionários e manipulação de informações
+        — o próximo passo para desenvolver projetos mais inteligentes e completos.</p>
+
+    <p>💪 Continue firme, programador! Cada linha de código que você escreve é um passo rumo à independência digital.</p>
 
 <script src="../../script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
