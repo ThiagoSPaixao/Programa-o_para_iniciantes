@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Curso de Programação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="matrix-page">
+    <canvas id="matrix-canvas-menu" aria-hidden="true"></canvas>
+
+    <main class="menu">
+        <a href="index.html" class="btn-voltar-menu">⬅️ Voltar</a>
+        
+        <section class="menu-list" aria-labelledby="contact-title">
+            <h2 id="contact-title">📬 Fale Comigo</h2>
+            
+            <!-- SEU PORTFÓLIO -->
+            <div class="contact-card">
+                <h3>👨‍💻 Sobre o Autor</h3>
+                <p><strong>Thiago Souza</strong></p>
+                <p>Profissional da saúde apaixonado por tecnologia e educação</p>
+                
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/thiagospaix%C3%A3o/" class="cta contact-cta" target="_blank">💼 LinkedIn</a>
+                    <a href="https://github.com/ThiagoSPaixao" class="cta contact-cta" target="_blank">🐱 GitHub</a>
+                    <a href="https://thiagosouza.dev" class="cta contact-cta" target="_blank">🌐 Portfólio</a>
+                </div>
+            </div>
+
+            <!-- FORMULÁRIO DE CONTATO -->
+            <div class="contact-card">
+                <h3>💬 Envie sua Mensagem</h3>
+                <form class="contact-form" action="https://formsubmit.co/thiaguinhoescolhido26@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nova mensagem do curso">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <label for="name">Seu nome</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Seu e-mail</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Sua mensagem</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Dúvidas, sugestões ou feedback..." required></textarea>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="cta contact-cta">📤 Enviar Mensagem</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- INFORMAÇÕES EXTRAS -->
+            <div class="menu-footer">
+                <p>💡 <strong>Respondo todas as mensagens pessoalmente!</strong></p>
+                <p>Seu feedback ajuda a melhorar o curso para todos 🚀</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="matrix-menu.js"></script>
+</body>
+</html>

@@ -314,7 +314,10 @@ body.matrix-page {
 }
 
 /* permitimos clique apenas no botão */
-.hero .enter-btn { pointer-events: auto; }
+.hero .enter-btn, 
+.hero .contact-btn { 
+    pointer-events: auto; 
+}
 
 /* texto neon (título) */
 .neon {
@@ -664,4 +667,144 @@ body.dark-theme .tabela tr:hover {
       content: "⬅️";
       font-size: 0.9rem; /* mostra apenas a seta */
   }
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 999px;
+    border: 2px solid rgba(122, 252, 122, 0.3);
+    background: linear-gradient(180deg, rgba(122,252,122,0.1), rgba(122,252,122,0.05));
+    color: #eaffea;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(122,252,122,0.08);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(122,252,122,0.12);
+    background: linear-gradient(180deg, rgba(122,252,122,0.15), rgba(122,252,122,0.08));
+}
+
+/* === MELHORIAS PARA A PÁGINA DE CONTATO === */
+.contact-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.contact-links .cta {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+/* Ajuste para formulário de contato */
+.exercise-form input[type="text"],
+.exercise-form input[type="email"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background: transparent;
+    color: inherit;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Responsividade para contato */
+@media (max-width: 768px) {
+    .contact-links {
+        flex-direction: column;
+    }
+    
+    .contact-links .cta {
+        min-width: auto;
+    }
+}
+
+/* === ESTILOS ESPECÍFICOS PARA PÁGINA DE CONTATO === */
+.contact-card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    text-align: left;
+    color: #e8ffe8;
+    border: 1px solid rgba(122, 252, 122, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.contact-card h3 {
+    color: #b8ffb8;
+    margin-bottom: 15px;
+}
+
+.contact-cta {
+    background: #0b74da !important;
+    color: white !important;
+    border: none !important;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 6px;
+    font-weight: 600;
+    color: #e8ffe8;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #7afc7a;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e8ffe8;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(232, 255, 232, 0.6);
+}
+
+.contact-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.contact-links .cta {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact-links {
+        flex-direction: column;
+    }
+    
+    .contact-links .cta {
+        min-width: auto;
+    }
 }
