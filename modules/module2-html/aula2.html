@@ -43,7 +43,42 @@
         <li>Boas práticas de estruturação</li>
         <li>Criar sua própria página HTML bem organizada</li>
     </ul>
+    <br>
 
+    <h3>🏗️ Explicação Passo a Passo</h3> <br>
+    <h4>1) O papel do &lt;!DOCTYPE html&gt;</h4>
+    <p>Essa linha aparece no topo de todo arquivo HTML moderno:</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+&lt;!DOCTYPE html&gt;
+            </code></pre>
+        </div>
+    </section> <br>
+
+    <p>Ela não é uma tag.</p>
+    <p>Ela é um aviso para o navegador:</p>
+    <blockquote>“Ei, esta página usa HTML5. Por favor, interprete tudo no modo moderno.”</blockquote> <br>
+    <p>Sem isso, navegadores podem entrar em modo “antigo” e exibir coisas de forma incorreta.</p> <br>
+
+    <h4>2) A tag &lt;html&gt;</h4>
+    <p>É o container-mestre da página — tudo o que existe no documento fica dentro dela.</p>
+    
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+&lt;html lang="pt-BR"&gt
+ ...
+&lt;/html&gt;
+            </code></pre>
+        </div>
+    </section> <br>
+
+    <p>O atributo <strong>lang="pt-BR"</strong> indica para navegadores e leitores de tela que o idioma principal é português do Brasil.</p>
+    <p>Isso melhora acessibilidade, SEO e traduções automáticas.</p> <br>
+
+    <h4>3) A área invisível: &lt;head&gt;</h4>
 
 
 
