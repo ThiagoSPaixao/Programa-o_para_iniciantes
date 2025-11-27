@@ -3,170 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Módulo 2 - Aula 2: Anatomia do HTML</title>
-    <link rel="stylesheet" href="../../../style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <title>Modulo 2 - HTML</title>
+    <link rel="stylesheet" href="../../style.css">
 </head>
-
 <body>
     <header>
-        <div class="header-top">
+    <div class="header-top">
             <a href="index.html" class="btn-voltar">⬅️ Voltar</a>
             <button id="theme-toggle" class="theme-btn">🌙</button>
         </div>
-        <h1>HTML do Zero ao Avançado</h1>
-        <h2>Módulo 2 - Aula 2: Anatomia de uma Página HTML</h2>
-        <h3>Entendendo cada parte essencial do esqueleto HTML</h3>
-        <h5><em>Por Thiago Souza</em></h5>
+    <h1>HTML do Zero ao Avançado</h1>
+    <h2>Módulo 2 - Anatomia de uma Página HTML</h2>
+    <h3>Entender cada parte essencial do esqueleto de uma página HTML</h3>
+    <h5><em>Por Thiago Souza</em></h5>
     </header>
 
     <br>
+    <h3>Introdução</h3>
+    <br>
+    <p>Imagine que uma página HTML é como uma casa:</p>
+    <ul>
+        <li>A fundação mantém tudo de pé.</li>
+        <li>A área técnica cuida da parte invisível, como a fiação.</li>
+        <li>E o espaço de convivência é onde as pessoas realmente ficam.</li>
+    </ul>
 
-    <div class="lesson-content">
-        <p><strong>Olá, futuro desenvolvedor! 🌱</strong></p>
+    <p>No HTML, essas três áreas têm nome: <strong>&lt;!DOCTYPE&gt;, &lt;head&gt; e &lt;body&gt;.</p></strong>
 
-        <p>Imagine que uma página HTML é como uma casa:</p>
-        <ul>
-            <li>A fundação mantém tudo de pé</li>
-            <li>A área técnica cuida da parte invisível</li>
-            <li>O espaço de convivência é onde as pessoas ficam</li>
-        </ul>
+    <p>Hoje você vai entender a função de cada uma — e, quando terminar, vai ser capaz de “ler” qualquer página HTML que
+    encontrar por aí. Este é um daqueles dias que mudam sua visão sobre a web.</p>
 
-        <p>No HTML, essas três áreas têm nome: <strong>&lt;!DOCTYPE&gt;, &lt;head&gt; e &lt;body&gt;</strong>.</p>
+    <h3>🧩 O que você vai aprender hoje</h3> <br>
 
-        <h4>🎯 O que você vai aprender hoje</h4>
-        <ul class="checklist">
-            <li>✅ Para que serve o <strong>&lt;!DOCTYPE html&gt;</strong></li>
-            <li>✅ O papel da tag <strong>&lt;html&gt;</strong></li>
-            <li>✅ O que fica dentro do <strong>&lt;head&gt;</strong></li>
-            <li>✅ O que vai dentro do <strong>&lt;body&gt;</strong></li>
-            <li>✅ Boas práticas de estruturação</li>
-        </ul>
+    <ul>
+        <li>Para que serve o <strong>&lt;!DOCTYPE html&gt;</strong></li>
+        <li>O papel da tag <strong>&lt;html>&lt;/html&gt;</strong></li>
+        <li>O que fica dentro do &lt;head&gt; (e por que ele é tão importante)</li>
+        <li>O que é colocado dentro do <strong>&lt;body&gt;&lt;/body&gt;</strong> </li>
+        <li>Boas práticas de estruturação</li>
+        <li>Criar sua própria página HTML bem organizada</li>
+    </ul>
+    <br>
 
-        <h4>🏗️ 1. O papel do &lt;!DOCTYPE html&gt;</h4>
-        <p>Essa linha aparece no topo de todo arquivo HTML moderno:</p>
+    <h3>🏗️ Explicação Passo a Passo</h3> <br>
+    <h4>1) O papel do &lt;!DOCTYPE html&gt;</h4>
+    <p>Essa linha aparece no topo de todo arquivo HTML moderno:</p>
 
-        <section>
-            <div class="code-example">
-                <pre><code class="language-html">&lt;!DOCTYPE html&gt;</code></pre>
-            </div>
-        </section>
-
-        <p>Ela <strong>não é uma tag</strong>, mas um aviso para o navegador:</p>
-        <blockquote>"Ei, esta página usa HTML5. Por favor, interprete tudo no modo moderno."</blockquote>
-
-        <h4>🌐 2. A tag &lt;html&gt;</h4>
-        <p>É o container-mestre da página — tudo fica dentro dela:</p>
-
-        <section>
-            <div class="code-example">
-                <pre><code class="language-html">&lt;html lang="pt-BR"&gt;
-    ...todo o conteúdo...
-&lt;/html&gt;</code></pre>
-            </div>
-        </section>
-
-        <p>O atributo <strong>lang="pt-BR"</strong> é crucial para:</p>
-        <ul>
-            <li>📱 Acessibilidade (leitores de tela)</li>
-            <li>🔍 SEO (motores de busca)</li>
-            <li>🌍 Traduções automáticas</li>
-        </ul>
-
-        <h4>🎭 3. A área invisível: &lt;head&gt;</h4>
-        <p>O <strong>&lt;head&gt;</strong> é como o bastidor do teatro — ninguém vê, mas tudo depende dele.</p>
-
-        <section>
-            <div class="code-example">
-                <pre><code class="language-html">&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-    &lt;title&gt;Minha Página&lt;/title&gt;
-&lt;/head&gt;</code></pre>
-            </div>
-        </section>
-
-        <h4>👁️ 4. A área visível: &lt;body&gt;</h4>
-        <p>Tudo que o usuário vê e interage está aqui:</p>
-
-        <section>
-            <div class="code-example">
-                <pre><code class="language-html">&lt;body&gt;
-    &lt;h1&gt;Bem-vindo!&lt;/h1&gt;
-    &lt;p&gt;Este é o conteúdo principal.&lt;/p&gt;
-&lt;/body&gt;</code></pre>
-            </div>
-        </section>
-
-        <h4>📝 Exemplo Prático Completo</h4>
-        <p>Crie um arquivo <strong>estrutura.html</strong> com este código:</p>
-
-        <section>
-            <div class="code-example">
-                <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang="pt-BR"&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-    &lt;title&gt;Aula 2 - Anatomia do HTML&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;header&gt;
-        &lt;h1&gt;Anatomia do HTML&lt;/h1&gt;
-    &lt;/header&gt;
-    &lt;main&gt;
-        &lt;p&gt;Hoje aprendi para que servem head e body.&lt;/p&gt;
-        &lt;p&gt;E também aprendi o papel do DOCTYPE.&lt;/p&gt;
-    &lt;/main&gt;
-    &lt;footer&gt;
-        &lt;p&gt;Feito por mim na Aula 2!&lt;/p&gt;
-    &lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-            </div>
-        </section>
-
-        <h4>🔧 Exercício Guiado</h4>
-        <ol>
-            <li>Crie <strong>minha-pagina.html</strong></li>
-            <li>Escreva o esqueleto básico completo</li>
-            <li>No <strong>&lt;head&gt;</strong>, inclua charset e title</li>
-            <li>No <strong>&lt;body&gt;</strong>, adicione um título e dois parágrafos</li>
-            <li>Abra no navegador e teste!</li>
-        </ol>
-
-        <h4>🚀 Desafio Final</h4>
-        <p>Crie uma página <strong>sobre-mim.html</strong> que contenha:</p>
-        <ul>
-            <li>Estrutura HTML5 completa</li>
-            <li>Seu nome no título da aba</li>
-            <li>Um cabeçalho com seu nome</li>
-            <li>Dois parágrafos sobre seus hobbies</li>
-            <li>Um rodapé com "© 2024 - Meu Site"</li>
-        </ul>
-
-        <!-- Marcador de conclusão de aula -->
-        <div id="lesson-completion-marker" class="completion-marker"></div>
-
-        <div class="completion-notification" style="display: none;" id="completionAlert">
-            🎉 Parabéns! Aula concluída. Continue para a próxima!
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+&lt;!DOCTYPE html&gt;
+            </code></pre>
         </div>
-    </div>
+    </section> <br>
 
-    <script src="../../../script.js"></script>
-    <script src="../../../js/progress.js"></script>
-    <script>
-        // Mostra notificação quando aula é marcada como concluída
-        window.addEventListener('progressUpdated', () => {
-            const alert = document.getElementById('completionAlert');
-            alert.style.display = 'block';
-            setTimeout(() => {
-                alert.style.display = 'none';
-            }, 5000);
-        });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <p>Ela não é uma tag.</p>
+    <p>Ela é um aviso para o navegador:</p>
+    <blockquote>“Ei, esta página usa HTML5. Por favor, interprete tudo no modo moderno.”</blockquote> <br>
+    <p>Sem isso, navegadores podem entrar em modo “antigo” e exibir coisas de forma incorreta.</p> <br>
+
+    <h4>2) A tag &lt;html&gt;</h4>
+    <p>É o container-mestre da página — tudo o que existe no documento fica dentro dela.</p>
+    
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+&lt;html lang="pt-BR"&gt
+ ...
+&lt;/html&gt;
+            </code></pre>
+        </div>
+    </section> <br>
+
+    <p>O atributo <strong>lang="pt-BR"</strong> indica para navegadores e leitores de tela que o idioma principal é português do Brasil.</p>
+    <p>Isso melhora acessibilidade, SEO e traduções automáticas.</p> <br>
+
+    <h4>3) A área invisível: &lt;head&gt;</h4>
+    <p>O <b>&lt;head&gt;</b> é como o bastidor do teatro — ninguém vê, mas tudo depende dele.</p>
+    <p>Exemplos de elementos que ficam nele:</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-python">
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;Minha Página&lt;/title&gt;
+&lt;/head&gt;
+            </code></pre>
+        </div>
+    </section> <br>
+    
+    <p><b>O que cada um desses faz?</b></p>
+
+    <ul>
+        <li><b>&lt;meta charset="utf-8"&gt;</b> <br>
+        Define a codificação dos caracteres. Sem ele, acentos podem quebrar.</li>
+        <li><b>&lt;meta name="viewport"&gt;</b></li>
+        Diz ao navegador como ajustar o conteúdo em telas menores (celulares).<br>
+        <i>Mesmo sem CSS, é boa prática incluir já agora.</i>
+        <li><b>&lt;title&gt;</b></li>
+        É o texto exibido na aba do navegador.
+        Não aparece na página, mas é super importante para identificação e SEO.
+    </ul> <br>
+
+    <h4>4) A área visível: &lt;body&gt;</h4>
+    <p>Tudo o que aparece na tela está aqui:</p>
+
+    <section>
+        <div class="code-example">
+            <pre><code class="language-html">
+&lt;body&gt;
+  &lt;h1&gt;Bem-vindo!&lt;/h1&gt;
+  &lt;p&gt;Este é o conteúdo principal.&lt;/p&gt;
+&lt;/body&gt;
+            </code></pre>
+        </div>
+    </section>
+    <p>Se o usuário consegue ver, clicar ou interagir → está dentro de <b>&lt;body&gt;  </b>.</p> <br>
+
+    <h4>5) Juntando tudo — estrutura mínima perfeita</h4>
+    <p>Aqui está o modelo completo e limpo da aula de hoje:</p>
+        <section>
+        <div class="code-example">
+            <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Aula 2 — Anatomia do HTML&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h1&gt;Estruturando minha página&lt;/h1&gt;
+    &lt;p&gt;Agora eu entendo como o HTML se organiza internamente.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </div>
+    </section> <br>
+
+    <h4>📝 Exemplo Prático — Criando uma página organizada</h4>
+    <p>Crie um arquivo chamado <b><i>estrutura.html</i></b> com o conteúdo abaixo:</p>
+
+<section>
+  <div class="code-example">
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Estrutura HTML — Aula 2&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;Anatomia do HTML&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+      &lt;p&gt;Hoje aprendi para que servem o head e o body.&lt;/p&gt;
+      &lt;p&gt;E também aprendi o papel do DOCTYPE.&lt;/p&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+      &lt;p&gt;Feito por mim na Aula 2!&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+  </div>
+</section>
+<p>Abra no navegador e veja como tudo se encaixa perfeitamente.</p> <br>
+
+<h4>🔧 Exercício Guiado (faça junto comigo)</h4>
+<ol>
+    <li>Crie um novo arquivo chamado <b>minha-pagina.html</b>.</li>
+    <li>Escreva o esqueleto básico (doctype, html, head, body).</li>
+    <li>No &lt;head&gt;, coloque:</li>
+        <ul>
+            <li>&lt;meta charset="utf-8"&gt;</li>
+            <li>&lt;title&gt; com um nome criativo</li>
+        </ul>
+    <li>No <body>, coloque:</li>
+        <ul>
+            <li>Um &lt;h1&gt; com um título</li>
+            <li>Dois parágrafos explicando o que você aprendeu hoje</li>
+        </ul>
+    <li>Abra no navegador</li>
+    <li>Edite o título da aba (&lt;title&gt;) e veja a diferença</li>
+</ol>
+
+<h4>✔️ Checklist Rápido (resumo)</h4>
+
+
+
+
+<script src="../../script.js"></script>
 </body>
 </html>
-[file content end]
