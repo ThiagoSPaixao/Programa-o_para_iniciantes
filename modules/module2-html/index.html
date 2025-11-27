@@ -1,11 +1,12 @@
+[file name]: modules/module2-html/index.html
+[file content begin]
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Índice — Curso</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Módulo 2 - HTML</title>
 <link rel="stylesheet" href="../../style.css">
-
 </head>
 
 <body class="matrix-page">
@@ -13,22 +14,49 @@
 <canvas id="matrix-canvas-menu" aria-hidden="true"></canvas>
 
 <main class="menu">
-
     <a href="../../menu.html" class="btn-voltar-menu">⬅️ Voltar</a>
     <section class="menu-list" aria-labelledby="menu-title">
     <h2 id="menu-title">Módulo 2 - HTML</h2>
+    <h3>Do Zero ao Avançado</h3>
 
-    <a href="aula1.html">Aula 1 - Boas Vindas ao HTML</a>
-    <a href="aula2.html">Aula 2 - Em Desenvolvimento</a>
-    <a href="aula3.html">Aula 3 - Em Desenvolvimento</a>
-    <a href="aula4.html">Aula 4 - Em Desenvolvimento</a>
-    <a href="aula5.html">Aula 5 - Em Desenvolvimento</a>
+    <div class="module-progress">
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 20%"></div>
+        </div>
+        <span class="progress-text">1/5 aulas concluídas</span>
+    </div>
 
-    <p class="menu-footer">Clique na fase desejada para abrir a aula.</p>
-    
+    <a href="aula1/index.html" class="lesson-link" data-lesson="1">
+        📄 Aula 1 - O que é HTML e como a Web funciona
+        <span class="lesson-status completed">✅</span>
+    </a>
+    <a href="aula2/index.html" class="lesson-link" data-lesson="2">
+        📄 Aula 2 - Anatomia de uma Página HTML
+        <span class="lesson-status">🔒</span>
+    </a>
+    <a href="aula3/index.html" class="lesson-link" data-lesson="3">
+        📄 Aula 3 - Tags HTML Essenciais
+        <span class="lesson-status">🔒</span>
+    </a>
+    <a href="aula4/index.html" class="lesson-link" data-lesson="4">
+        📄 Aula 4 - Formulários HTML
+        <span class="lesson-status">🔒</span>
+    </a>
+    <a href="aula5/index.html" class="lesson-link" data-lesson="5">
+        📄 Aula 5 - HTML Semântico e Acessibilidade
+        <span class="lesson-status">🔒</span>
+    </a>
+
+    <div class="module-actions">
+        <button id="continue-btn" class="cta">Continuar Próxima Aula</button>
+    </div>
+
+    <p class="menu-footer">Clique na aula para abrir o conteúdo.</p>
     </section>
 </main>
 
 <script src="../../matrix-menu.js"></script>
+<script src="../../js/progress.js"></script>
 </body>
 </html>
+[file content end]
