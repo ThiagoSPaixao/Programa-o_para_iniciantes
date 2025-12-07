@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aula 3 — Primeiras Tags e Texto na Tela</title>
+  <meta name="description" content="Aula 3: primeiras tags e texto na tela — títulos, parágrafos, quebras e separadores.">
+</head>
+<body>
+  <header>
+    <h1>🌟 Aula 3 — Primeiras Tags e Texto na Tela</h1>
+    <p><strong>Tempo estimado:</strong> 15–25 minutos</p>
+    <p><strong>Objetivo do dia:</strong> Aprender a exibir textos na página usando títulos, parágrafos e elementos básicos de formatação.</p>
+    <hr>
+  </header>
+
+  <main>
+    <section aria-labelledby="intro">
+      <h2 id="intro">🎉 Introdução Motivadora</h2>
+      <p>
+        Hoje você vai ver seu HTML ganhar vida de verdade.
+        Até agora, você montou a estrutura da casa… agora vamos começar a decorar cada cômodo.
+      </p>
+
+      <p>Você vai aprender a:</p>
+      <ul>
+        <li>Criar títulos impactantes</li>
+        <li>Escrever parágrafos claros</li>
+        <li>Quebrar linhas quando necessário</li>
+        <li>Dividir trechos com separadores</li>
+      </ul>
+
+      <p>
+        Tudo isso usando tags simples que você vai repetir praticamente todos os dias da sua vida como desenvolvedor.
+      </p>
+
+      <p><em>Respira fundo: hoje você realmente começa a criar uma página de verdade.</em></p>
+      <hr>
+    </section>
+
+    <section aria-labelledby="aprendizado">
+      <h2 id="aprendizado">🧩 O que você vai aprender hoje</h2>
+      <ul>
+        <li>O que são <code>&lt;h1&gt;</code> até <code>&lt;h6&gt;</code></li>
+        <li>Como criar textos com <code>&lt;p&gt;</code></li>
+        <li>Quando usar <code>&lt;br&gt;</code> para quebra de linha</li>
+        <li>Como usar <code>&lt;hr&gt;</code> para criar divisões</li>
+        <li>Como escrever HTML limpo, organizado e semântico</li>
+      </ul>
+      <hr>
+    </section>
+
+    <section aria-labelledby="passo-a-passo">
+      <h2 id="passo-a-passo">🏗️ Explicação Passo a Passo</h2>
+
+      <article>
+        <h3>1) Títulos: <code>&lt;h1&gt;</code> até <code>&lt;h6&gt;</code></h3>
+        <p>O HTML tem seis níveis de títulos, do mais importante ao menos importante:</p>
+
+       <pre><code>&lt;h1&gt;Título principal da página&lt;/h1&gt;
+&lt;h2&gt;Subtítulo importante&lt;/h2&gt;
+&lt;h3&gt;Seção&lt;/h3&gt;
+&lt;h4&gt;Subseção&lt;/h4&gt;
+&lt;h5&gt;Detalhes&lt;/h5&gt;
+&lt;h6&gt;Notas pequenas&lt;/h6&gt;
+</code></pre>
+
+        <p>Exemplo de uso (semântica e acessibilidade importam):</p>
+        <pre><code>&lt;h1&gt;Título da Página&lt;/h1&gt;
+&lt;h2&gt;Seção Principal&lt;/h2&gt;
+&lt;h3&gt;Subseção&lt;/h3&gt;</code></pre>
+      </article>
+
+      <article>
+        <h3>2) Parágrafos: <code>&lt;p&gt;</code></h3>
+        <p>Use <code>&lt;p&gt;</code> para agrupar blocos de texto com sentido completo — um parágrafo por ideia.</p>
+
+        <p>Exemplo:</p>
+        <pre><code>&lt;p&gt;Este é um parágrafo explicando um conceito.&lt;/p&gt;
+&lt;p&gt;Este é outro parágrafo com mais detalhes.&lt;/p&gt;</code></pre>
+      </article>
+
+      <article>
+        <h3>3) Quebra de linha: <code>&lt;br&gt;</code></h3>
+        <p>Quando você precisa forçar uma quebra de linha dentro de um parágrafo (por exemplo, em um endereço ou poema), use <code>&lt;br&gt;</code>.</p>
+
+        <p>Exemplo:</p>
+        <pre><code>&lt;p&gt;Rua das Flores, 123&lt;br&gt;Bairro Central&lt;/p&gt;</code></pre>
+
+        <p><strong>Atenção:</strong> não use <code>&lt;br&gt;</code> para separar parágrafos — prefira <code>&lt;p&gt;</code>.</p>
+      </article>
+
+      <article>
+        <h3>4) Separador visual: <code>&lt;hr&gt;</code></h3>
+        <p>Use <code>&lt;hr&gt;</code> para dividir visualmente seções quando fizer sentido — é um elemento semântico que indica mudança de tema.</p>
+
+        <p>Exemplo:</p>
+        <pre><code>&lt;h2&gt;Seção A&lt;/h2&gt;
+&lt;p&gt;Conteúdo A...&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Seção B&lt;/h2&gt;</code></pre>
+      </article>
+
+      <hr>
+    </section>
+
+    <section aria-labelledby="boas-praticas">
+      <h2 id="boas-praticas">💡 Boas Práticas Rápidas</h2>
+      <ul>
+        <li>Use apenas um <code>&lt;h1&gt;</code> por página, quando possível — ajuda SEO e acessibilidade.</li>
+        <li>Prefira parágrafos bem curtos para leitura fácil.</li>
+        <li>Use tags semânticas (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>) para estruturar o documento.</li>
+        <li>Evite usar <code>&lt;br&gt;</code> como substituto de parágrafos.</li>
+      </ul>
+      <hr>
+    </section>
+
+    <section aria-labelledby="exercicio">
+      <h2 id="exercicio">📝 Exercício Prático (rápido)</h2>
+
+      <p>Crie um arquivo chamado <strong>aula3-exercicio.html</strong> com:</p>
+      <ol>
+        <li>Um título principal (<code>&lt;h1&gt;</code>).</li>
+        <li>Duas seções (<code>&lt;h2&gt;</code>) cada uma com um parágrafo (<code>&lt;p&gt;</code>).</li>
+        <li>Um separador (<code>&lt;hr&gt;</code>) entre as seções.</li>
+      </ol>
+
+      <p>Abra no navegador e verifique a hierarquia dos títulos e a legibilidade do texto.</p>
+      <hr>
+    </section>
+
+    <section aria-labelledby="resumo">
+      <h2 id="resumo">📌 Resumo</h2>
+      <ul>
+        <li>Títulos: <code>&lt;h1&gt;</code> → <code>&lt;h6&gt;</code> — organizam importância.</li>
+        <li>Parágrafos: <code>&lt;p&gt;</code> — blocos de texto com sentido.</li>
+        <li>Quebra de linha: <code>&lt;br&gt;</code> — use com moderação.</li>
+        <li>Separador: <code>&lt;hr&gt;</code> — indica mudança de tema.</li>
+      </ul>
+      <hr>
+    </section>
+
+    <section aria-labelledby="motivacao">
+      <h2 id="motivacao">🚀 Próximos Passos</h2>
+      <p>
+        Ótimo trabalho! Com títulos e parágrafos dominados, no próximo encontro vamos ver como estilizar esses elementos com CSS
+        e deixar suas páginas com cara profissional.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>— Fim da Aula 3 —</p>
+  </footer>
+</body>
+</html>
