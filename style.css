@@ -541,6 +541,31 @@ body.dark-theme .tabela tr:hover {
 .token.class-name { color: #4ec9b0 !important; }     /* classes */
 .token.punctuation { color: #d4d4d4 !important; }    /* pontuação */
 
+/* === Syntax Highlight específico para HTML === */
+.token.tag {
+  color: #569cd6; /* tags <html>, <p> */
+}
+
+.token.attr-name {
+  color: #9cdcfe; /* atributos lang, charset */
+}
+
+.token.attr-value {
+  color: #ce9178; /* valores "pt-BR" */
+}
+
+.token.punctuation {
+  color: #d4d4d4;
+}
+
+.token.doctype {
+  color: #4ec9b0;
+}
+
+.token.comment {
+  color: #6a9955;
+}
+
 .code-example::-webkit-scrollbar {
   height: 8px;
 }
