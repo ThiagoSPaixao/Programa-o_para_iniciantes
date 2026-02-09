@@ -1,5 +1,3 @@
-[file name]: menu.html
-[file content begin]
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,71 +8,79 @@
 </head>
 
 <body class="matrix-page">
+
+  <!-- FUNDO MATRIX -->
   <canvas id="matrix-canvas-menu" aria-hidden="true"></canvas>
 
   <main class="menu">
     <a href="index.html" class="btn-voltar-menu">⬅️ Voltar</a>
+
     <section class="menu-list" aria-labelledby="menu-title">
       <h2 id="menu-title">🚀 Curso de Programação</h2>
       <h3>Selecione o módulo</h3>
+
+      <!-- BARRA DE PROGRESSO GERAL -->
       <div class="overall-progress-wrap" aria-label="Progresso geral do curso">
-  <div class="overall-progress-text" id="overall-progress-text">Progresso Geral: 0%</div>
-  <div class="overall-progress-track">
-    <div class="overall-progress-bar" id="overall-progress" style="width: 0%"></div>
-  </div>
-</div>
+        <div class="overall-progress-text" id="overall-progress-text">
+          Progresso Geral: 0%
+        </div>
+        <div class="overall-progress-track">
+          <div class="overall-progress-bar" id="overall-progress"></div>
+        </div>
+      </div>
 
+      <!-- MÓDULOS -->
+      <a href="modules/module1-fundamentos/index.html"
+         class="module-link"
+         data-module="1">
+        📚 Módulo 1 — Fundamentos de Programação
+      </a>
 
-      <a href="modules/module1-fundamentos/index.html" class="module-link" data-module="1">
-        📚 Módulo 1 - Fundamentos de Programação
-        <span class="module-status completed"></span>
+      <a href="modules/module2-html/index.html"
+         class="module-link"
+         data-module="2">
+        🌐 Módulo 2 — HTML
       </a>
-      <a href="modules/module2-html/index.html" class="module-link" data-module="2">
-        🌐 Módulo 2 - HTML
-        <span class="module-status in-progress"></span>
+
+      <a href="modules/module3-css/index.html"
+         class="module-link"
+         data-module="3">
+        🎨 Módulo 3 — CSS
+        <span class="module-status upcoming">🔜 Em breve</span>
       </a>
-      <a href="modules/module3-css/index.html" class="module-link" data-module="3">
-        🎨 Módulo 3 - CSS
-        <span class="module-status upcoming">🔜 Em Breve</span>
+
+      <a href="modules/module4-js/index.html"
+         class="module-link"
+         data-module="4">
+        ⚡ Módulo 4 — JavaScript
+        <span class="module-status upcoming">🔜 Em breve</span>
       </a>
-      <a href="modules/module4-js/index.html" class="module-link" data-module="4">
-        ⚡ Módulo 4 - JavaScript
-        <span class="module-status upcoming">🔜 Em Breve</span>
+
+      <a href="modules/module5-projeto-final/index.html"
+         class="module-link"
+         data-module="5">
+        🏆 Módulo 5 — Projeto Final
+        <span class="module-status upcoming">🔜 Em breve</span>
       </a>
-      <a href="modules/module5-projeto-final/index.html" class="module-link" data-module="5">
-        🏆 Módulo 5 - Projeto Final
-        <span class="module-status upcoming">🔜 Em Breve</span>
+
+      <a href="modules/module6-python/index.html"
+         class="module-link"
+         data-module="6">
+        🐍 Módulo 6 — Python
+        <span class="module-status upcoming">🔜 Em breve</span>
       </a>
-      <a href="modules/module6-python/index.html" class="module-link" data-module="6">
-        🐍 Módulo 6 - Python
-        <span class="module-status upcoming">🔜 Em Breve</span>
-      </a>
+
+      <div class="menu-footer">
+        <p>💡 Seu progresso é salvo automaticamente neste navegador.</p>
+        <p>Você pode sair e voltar quando quiser 🚀</p>
+      </div>
 
     </section>
   </main>
 
+  <!-- SCRIPTS -->
   <script src="matrix-menu.js"></script>
-  <script>
-    // Atualiza progresso geral no menu principal
-    document.addEventListener('DOMContentLoaded', () => {
-        const progress = window.courseProgress ? window.courseProgress.getProgress() : {
-            modules: {1: {completed: [1]}, 2: {completed: [1]}, 3: {completed: []}, 4: {completed: []}, 5: {completed: []}, 6: {completed: []}}
-        };
-        
-        const totalLessons = 7 + 5 + 5 + 5 + 5 + 5; // Ajustar conforme módulos
-        let completedLessons = 0;
-        
-        Object.values(progress.modules).forEach(module => {
-            completedLessons += module.completed.length;
-        });
-        
-        const percentage = (completedLessons / totalLessons) * 100;
-        
-        document.getElementById('overall-progress').style.width = `${percentage}%`;
-        document.getElementById('overall-progress-text').textContent = 
-            `Progresso Geral: ${Math.round(percentage)}%`;
-    });
-  </script>
   <script src="js/progress.js"></script>
+
 </body>
 </html>
