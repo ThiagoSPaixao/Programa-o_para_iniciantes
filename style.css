@@ -844,3 +844,32 @@ body.dark-theme .tabela tr:hover {
   margin-right: 8px;
   cursor: pointer;
 }
+
+/* ===== Progresso Geral (menu) ===== */
+.overall-progress-wrap {
+  margin: 18px auto 6px;
+  width: min(520px, 92%);
+  text-align: center;
+}
+
+.overall-progress-text {
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #b8ffb8;
+}
+
+.overall-progress-track {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(122, 252, 122, 0.25);
+  overflow: hidden;
+}
+
+.overall-progress-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #bfffbf, #9ee69e);
+  transition: width 250ms ease;
+}
