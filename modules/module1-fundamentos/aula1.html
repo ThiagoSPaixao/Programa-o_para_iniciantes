@@ -8,17 +8,25 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="light-theme" data-module="1" data-lesson="1">
     
     <header>
         <div class="header-top">
             <a href="index.html" class="btn-voltar">⬅️ Voltar</a>
             <button id="theme-toggle" class="theme-btn">🌙</button>
         </div>
-            <h1>Programação Para Iniciantes</h1>
-            <h2>Módulo 1 - Fundamentos de Programação</h2>
-            <h3>Entendendo o que é programação, de forma rápida e simples</h3>
-                <h5><em>Por Thiago Souza</em></h5>
+
+        <h1>Programação Para Iniciantes</h1>
+        <h2>Módulo 1 - Fundamentos de Programação</h2>
+        <h3>Entendendo o que é programação, de forma rápida e simples</h3>
+        <h5><em>Por Thiago Souza</em></h5>
+
+        <!-- ✅ BOTÃO DE PROGRESSO (NOVO) -->
+        <div style="margin-top: 14px;">
+            <button id="mark-complete" class="cta" type="button">
+                ☑️ Marcar como concluída
+            </button>
+        </div>
     </header>
 
     <br>
@@ -202,7 +210,6 @@ Imagine que você precisa criar um programa simples para analisar a temperatura 
 </form>
 </section>
 
-
 <h4>🏁 Conclusão do Dia</h4>
 
 <p>
@@ -227,6 +234,11 @@ Imagine que você precisa criar um programa simples para analisar a temperatura 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
 <script src="../../script.js"></script>
+
+<!-- ✅ PROGRESSO (NOVO) -->
+<script src="../../js/progress.js"></script>
+
 </body>
 </html>
